@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['middleware' => 'localization'], function () {
+    Route::resource('tasks', TaskController::class);
+    Route::resource('users', UserController::class);
+});
+
+Route::get('change-language/{locale}', 'LocalizationController@changeLanguage')->name('change-language');
