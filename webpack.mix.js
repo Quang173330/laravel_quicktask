@@ -14,7 +14,8 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
-mix.js('resources/js/user.js','public/js');
-mix.js('resources/js/task.js','public/js');
-mix.styles('resources/css/user.css','public/css/user.css');
-mix.styles('resources/css/task.css','public/css/task.css');
+mix.js('resources/js/user.js', 'public/js');
+mix.js('resources/js/task.js', 'public/js');
+mix.styles('resources/css/user.css', 'public/css/user.css');
+mix.styles('resources/css/task.css', 'public/css/task.css');
+mix.styles('resources/css/layouts.css', 'public/css/layouts.css');

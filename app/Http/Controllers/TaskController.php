@@ -131,7 +131,7 @@ class TaskController extends Controller
     {
         $task = Task::find($id);
         if (isset($task)) {
-            $task->detach();
+            $task->users()->detach();
             $task->delete();
             
             return redirect()->route('tasks.index');
