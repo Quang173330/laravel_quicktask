@@ -12,6 +12,6 @@ return [
     'back' => 'Back',
     'addUser' => 'Add User',
     'newTask' => 'New Task',
-    'addTask' => 'Add User',
+    'addTask' => 'Add Task',
     'confirm' => 'Are you sure want to delete this task ?',
 ];

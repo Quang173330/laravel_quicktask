@@ -138,7 +138,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         if (isset($user)) {
-            $user->detach();
+            $user->tasks()->detach();
             $user->delete();
 
             return redirect()->route('users.index');
